@@ -1,3 +1,5 @@
+var path = require('path');
+
 module.exports = {
   mode: "development",
 
@@ -18,5 +20,10 @@ module.exports = {
         exclude: /node_modules/
       },
     ]
+  },
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
+    port: 9000
   }
 };
